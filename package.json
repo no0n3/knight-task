@@ -1,0 +1,12 @@
+{
+  "name": "task_urban",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ser/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "test"
+  },
+  "author": "Velizar Ivanov",
+  "license": "ISC"
+}
