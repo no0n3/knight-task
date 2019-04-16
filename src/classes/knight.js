@@ -3,7 +3,16 @@ const { MoveMapper } = require('./move-mapper');
 
 class Knight {
   constructor(point) {
-    this.point = point || new Point(0, 0);
+    this.point = this.isValidPoint(point) ? point : new Point(0, 0);
+  }
+
+  /**
+   * Checks if the given param is a valid point object. A param is valid point object when it is an instance of Point.
+   * @param {*} point the param to be checked
+   * @returns {boolean} TRUE if the param is a valid point object, FALSE otherwise
+   */
+  isValidPoint(point) {
+    return point instanceof Point;
   }
 
   /**

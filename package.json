@@ -5,8 +5,11 @@
   "main": "ser/main.js",
   "scripts": {
     "start": "node src/main.js",
-    "test": "test"
+    "test": "mocha"
   },
   "author": "Velizar Ivanov",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.1.3"
+  }
 }
