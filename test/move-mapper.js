@@ -93,3 +93,38 @@ describe('Test MoveMapper movement type combinations', function () {
     assert.equal(-3, point.y);
   });
 });
+
+describe('Test MoveMapper movement type combinations with integer move type', function () {
+  it('test move type 111', function () {
+    let point = new Point(0, 0);
+    for (let moveType of [1, 1, 1]) {
+      point = MoveMapper.move(point, moveType);
+    }
+    assert.equal(3, point.x);
+    assert.equal(6, point.y);
+  });
+  it('test move type 123', function () {
+    let point = new Point(0, 0);
+    for (let moveType of [1, 2, 3]) {
+      point = MoveMapper.move(point, moveType);
+    }
+    assert.equal(5, point.x);
+    assert.equal(2, point.y);
+  });
+  it('test move type 15', function () {
+    let point = new Point(0, 0);
+    for (let moveType of [1, 5]) {
+      point = MoveMapper.move(point, moveType);
+    }
+    assert.equal(0, point.x);
+    assert.equal(0, point.y);
+  });
+  it('test move type 56', function () {
+    let point = new Point(0, 0);
+    for (let moveType of [5, 6]) {
+      point = MoveMapper.move(point, moveType);
+    }
+    assert.equal(-3, point.x);
+    assert.equal(-3, point.y);
+  });
+});

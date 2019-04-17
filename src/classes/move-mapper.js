@@ -1,5 +1,6 @@
 const { MoveError } = require('../errors/move-error');
 const { MoveType } = require('./move-type');
+const { isInteger } = require('../common');
 
 class MoveMapper {
 
@@ -10,6 +11,10 @@ class MoveMapper {
    * @returns {Point} The new point based on the move type
    */
   static move(point, move) {
+    if (isInteger(move)) {
+      move = new MoveType(move);
+    }
+
     switch (move.type) {
       case MoveType.TYPE_ONE:
         return point.modify(1, 2);
