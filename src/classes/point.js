@@ -25,6 +25,30 @@ class Point {
   getValidatedInt(number) {
     return isInteger(number) ? number : 0;
   }
+
+  /**
+   * Chechs if the current point object is equal to the supplied point
+   * @param {Point} point 
+   * @returns {boolean} TRUE if the points are equal, FALSE otherwise
+   */
+  equals(point) {
+    if (!(point instanceof Point)) {
+      return false;
+    }
+
+    if (this.x !== point.x) {
+      return false;
+    }
+    if (this.y !== point.y) {
+      return false;
+    }
+
+    return true;
+  }
+
+  toString() {
+    return `(x=${this.x}, y=${this.y})`;
+  }
 }
 
 module.exports = { Point };
