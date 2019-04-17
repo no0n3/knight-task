@@ -3,6 +3,9 @@ const { getMoves } = require('./moves-extractor');
 
 main();
 
+/**
+ * Main app function
+ */
 async function main() {
   const moves = await getMoves(); // moves integer array extracted from data/moves file.
   const knight = new Knight(); // knight object with default 0, 0 position
@@ -15,7 +18,7 @@ async function main() {
   for (const move of moves) {
     applyMove(knight, move);
 
-    let currentDistance = calculateDistFromCenter(knight.point.x, knight.point.y);
+    const currentDistance = calculateDistFromCenter(knight.point.x, knight.point.y);
     if (currentDistance > furthestDist) {
       furthestDist = currentDistance;
       furthestPoints = { x: knight.point.x, y: knight.point.y };
