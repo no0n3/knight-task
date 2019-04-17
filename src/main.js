@@ -30,8 +30,8 @@ async function main() {
   }
 
   console.log('All moves have been applied.')
-  console.log(`#1 Current position: x=${knight.point.x}, y=${knight.point.y}`);
-  console.log(`#2 furthest point: x=${furthestPoints.x}, y=${furthestPoints.y}`);
+  console.log(`#1 Current position of the knight after all moves have been applied: x=${knight.point.x}, y=${knight.point.y}`);
+  console.log(`#2 furthest point that the knight has ever been: x=${furthestPoints.x}, y=${furthestPoints.y}`);
   console.log('#3 Total unique equal x and y:', equalXY.length, 'Equal x and y: ', JSON.stringify(equalXY));
 }
 
