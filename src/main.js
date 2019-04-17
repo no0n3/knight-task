@@ -10,7 +10,7 @@ async function main() {
   const moves = await getMoves(); // moves integer array extracted from data/moves file.
   const knight = new Knight(); // knight object with default 0, 0 position
   const equalXY = [];
-  let furthestPoints = {};
+  let furthestPoints = { x: 0, y: 0 };
   let furthestDist = 0;
 
   console.log('Appling moves...')
